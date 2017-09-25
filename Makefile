@@ -1,10 +1,10 @@
-VERSION      ?= v0.12.2
+VERSION      ?= 0.12.2
 DOWNLOAD_URL ?= https://github.com/docker/machine/releases/download
 KERNEL       ?= Linux
 ARCH         ?= x86_64
 
 deb: ## Build a deb package of docker-machine binary
-	curl -s -X GET "${DOWNLOAD_URL}/${VERSION}/docker-machine-${KERNEL}-${ARCH}" -o docker-machine
+	curl -s -X GET "${DOWNLOAD_URL}/v${VERSION}/docker-machine-${KERNEL}-${ARCH}" -o docker-machine
 	chmod +x docker-machine
 	fpm -s dir -t deb -a all \
 	-n docker-machine \

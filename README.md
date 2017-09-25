@@ -13,7 +13,7 @@ or with more custom options:
 ```bash
 docker run -it --rm \
 -v ~/:/opt/release \
--e VERSION=v0.12.2 \
+-e VERSION=0.12.2 \
 -e DOWNLOAD_URL="https://custom.location"
 -e KERNEL=Linux \
 -e ARCH=x86_64 \
