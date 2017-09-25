@@ -4,7 +4,7 @@ KERNEL       ?= Linux
 ARCH         ?= x86_64
 
 deb: ## Build a deb package of docker-machine binary
-	curl -s -X GET "${DOWNLOAD_URL}/v${VERSION}/docker-machine-${KERNEL}-${ARCH}" -o docker-machine
+	curl -s -X GET -L "${DOWNLOAD_URL}/v${VERSION}/docker-machine-${KERNEL}-${ARCH}" -o docker-machine
 	chmod +x docker-machine
 	fpm -s dir -t deb -a all \
 	-n docker-machine \
